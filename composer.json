@@ -1,0 +1,52 @@
+{
+    "name": "tradecoverexchange/google-cloud-jwt-validator",
+    "description": "A package for validating Google Cloud's JWT provided by webhooks",
+    "keywords": [
+        "trade cover exchange",
+        "json web token",
+        "google cloud"
+    ],
+    "homepage": "https://github.com/tradecoverexchange/google-cloud-jwt-validator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Peter Fox",
+            "email": "peter@tradecoverexchange.com",
+            "homepage": "https://tradecoverexchange.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "firebase/php-jwt": ">=5.2.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "kevinrob/guzzle-cache-middleware": "^3.3",
+        "laravel/framework": "^7.0",
+        "orchestra/testbench": "^5.3",
+        "phpunit/phpunit": "^9.0",
+        "vimeo/psalm": "^3.11"
+    },
+    "autoload": {
+        "psr-4": {
+            "TradeCoverExchange\\GoogleJwtVerifier\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TradeCoverExchange\\GoogleJwtVerifier\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "psalm": "vendor/bin/psalm",
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
