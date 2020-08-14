@@ -1,7 +1,7 @@
 # Google Cloud JWT Authentication
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tradecoverexchange/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/tradecoverexchange/google-cloud-jwt-validator)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/run-tests?label=tests)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3Arun-tests+branch%3Amaster)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/Tests?label=tests)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3ATests+branch%3Amaster)
 [![Total Downloads](https://img.shields.io/packagist/dt/tradecoverexchange/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/tradecoverexchange/google-cloud-jwt-validator)
 
 A package for validating the authenticity of incoming Google Cloud requests such as those used by
