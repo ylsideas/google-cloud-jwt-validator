@@ -7,9 +7,9 @@ use Illuminate\Http\Client\Factory as Http;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Storage\LaravelCacheStorage;
 use Kevinrob\GuzzleCache\Strategy\PrivateCacheStrategy;
-use TradeCoverExchange\GoogleJwtVerifier\JwtFetcher;
+use TradeCoverExchange\GoogleJwtVerifier\JwkFetcher;
 
-class HttpClientJwtFetcher implements JwtFetcher
+class HttpClientJwkFetcher implements JwkFetcher
 {
     /**
      * @var Http

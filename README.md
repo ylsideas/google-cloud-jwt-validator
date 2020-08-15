@@ -25,7 +25,7 @@ without a valid JWT authentication token.
 
 Route::get('/')
     ->middleware(
-        \TradeCoverExchange\GoogleJwtVerifier\Laravel\GoogleJwtVerifier::middleware('server_account_email@google.com')
+        \TradeCoverExchange\GoogleJwtVerifier\Laravel\AuthenticateByOidc::middleware('server_account_email@google.com')
     );
 ```
 

@@ -2,7 +2,7 @@
 
 namespace TradeCoverExchange\GoogleJwtVerifier;
 
-interface JwtFetcher
+interface JwkFetcher
 {
     public function fetch(string $uri) : array;
 }

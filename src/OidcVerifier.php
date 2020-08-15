@@ -9,14 +9,14 @@ use TradeCoverExchange\GoogleJwtVerifier\Exceptions\InvalidAudienceException;
 use TradeCoverExchange\GoogleJwtVerifier\Exceptions\InvalidEmailException;
 use TradeCoverExchange\GoogleJwtVerifier\Exceptions\InvalidIssuerException;
 
-class JwtVerifier
+class OidcVerifier
 {
     /**
-     * @var JwtFetcher
+     * @var JwkFetcher
      */
     private $fetcher;
 
-    public function __construct(JwtFetcher $fetcher)
+    public function __construct(JwkFetcher $fetcher)
     {
         $this->fetcher = $fetcher;
     }

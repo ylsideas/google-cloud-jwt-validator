@@ -6,8 +6,8 @@ use Illuminate\Support\Facades\Route;
 use Mockery\MockInterface;
 use Orchestra\Testbench\TestCase;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use TradeCoverExchange\GoogleJwtVerifier\JwtVerifier;
-use TradeCoverExchange\GoogleJwtVerifier\Laravel\GoogleJwtVerifier;
+use TradeCoverExchange\GoogleJwtVerifier\Laravel\AuthenticateByOidc;
+use TradeCoverExchange\GoogleJwtVerifier\OidcVerifier;
 
 class MiddlewareTest extends TestCase
 {
@@ -15,20 +15,21 @@ class MiddlewareTest extends TestCase
     {
         $this->withoutExceptionHandling();
 
-        $this->mock(JwtVerifier::class, function (MockInterface $mock) {
+        $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')
                 ->with(
                     'VALID',
-                    GoogleJwtVerifier::CERT_URL,
+                    AuthenticateByOidc::CERT_URL,
                     'test@example.com',
                     'http://localhost/test',
-                    GoogleJwtVerifier::VALUE_ISSUER
+                    AuthenticateByOidc::VALUE_ISSUER
                 )
                 ->once()
                 ->andReturn(true);
         });
 
         $this
+            ->withoutExceptionHandling()
             ->withHeader('Authorization', 'Bearer VALID')
             ->get('/test')
             ->assertSuccessful();
@@ -36,7 +37,7 @@ class MiddlewareTest extends TestCase
 
     public function testMiddlewareBlocksUnauthorisedRequests()
     {
-        $this->mock(JwtVerifier::class, function (MockInterface $mock) {
+        $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')
                 ->never();
         });
@@ -50,14 +51,14 @@ class MiddlewareTest extends TestCase
 
     public function testMiddlewareBlocksRequests()
     {
-        $this->mock(JwtVerifier::class, function (MockInterface $mock) {
+        $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')
                 ->with(
                     'INVALID',
-                    GoogleJwtVerifier::CERT_URL,
+                    AuthenticateByOidc::CERT_URL,
                     'test@example.com',
                     'http://localhost/test',
-                    GoogleJwtVerifier::VALUE_ISSUER
+                    AuthenticateByOidc::VALUE_ISSUER
                 )
                 ->once()
                 ->andReturn(false);
@@ -79,7 +80,7 @@ class MiddlewareTest extends TestCase
      */
     protected function getEnvironmentSetUp($app)
     {
-        Route::middleware(GoogleJwtVerifier::middleware('test@example.com'))
+        Route::middleware(AuthenticateByOidc::middleware('test@example.com'))
             ->get('/test', function () {
                 return response('');
             });

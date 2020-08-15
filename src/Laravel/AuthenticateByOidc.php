@@ -4,15 +4,15 @@ namespace TradeCoverExchange\GoogleJwtVerifier\Laravel;
 
 use Closure;
 use Illuminate\Http\Response;
-use TradeCoverExchange\GoogleJwtVerifier\JwtVerifier;
+use TradeCoverExchange\GoogleJwtVerifier\OidcVerifier;
 
-class GoogleJwtVerifier
+class AuthenticateByOidc
 {
     public const CERT_URL = 'https://www.googleapis.com/oauth2/v3/certs';
     public const VALUE_ISSUER = 'https://accounts.google.com';
 
     /**
-     * @var JwtVerifier
+     * @var OidcVerifier
      */
     private $verifier;
 
@@ -21,7 +21,7 @@ class GoogleJwtVerifier
         return self::class . ':' . $email;
     }
 
-    public function __construct(JwtVerifier $verifier)
+    public function __construct(OidcVerifier $verifier)
     {
         $this->verifier = $verifier;
     }
