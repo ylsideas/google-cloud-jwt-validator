@@ -38,6 +38,13 @@
             "TradeCoverExchange\\GoogleJwtVerifier\\Tests\\": "tests"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TradeCoverExchange\\GoogleJwtVerifier\\Laravel\\GoogleJwtValidatorServiceProvider"
+            ]
+        }
+    },
     "scripts": {
         "psalm": "vendor/bin/psalm",
         "test": "vendor/bin/phpunit",
