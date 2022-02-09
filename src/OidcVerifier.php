@@ -28,7 +28,7 @@ class OidcVerifier
         string $audience = null,
         string $issuer = null,
         bool $throwExceptions = false
-    ) : bool {
+    ): bool {
         $key = JWK::parseKeySet($this->fetcher->fetch($jwkUri));
 
         try {

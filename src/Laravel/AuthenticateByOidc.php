@@ -16,7 +16,7 @@ class AuthenticateByOidc
      */
     private $verifier;
 
-    public static function middleware(string $email) : string
+    public static function middleware(string $email): string
     {
         return self::class . ':' . $email;
     }
