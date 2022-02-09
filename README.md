@@ -1,10 +1,10 @@
 # Google Cloud JWT Authentication
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/tradecoverexchange/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/tradecoverexchange/google-cloud-jwt-validator)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/Tests?label=tests)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3ATests+branch%3Amaster)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/tradecoverexchange/google-cloud-jwt-validator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/tradecoverexchange/google-cloud-jwt-validator/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/tradecoverexchange/google-cloud-jwt-validator/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/tradecoverexchange/google-cloud-jwt-validator/?branch=master)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/run-tests?label=tests)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/Check%20&%20fix%20styling?label=code%20style)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/tradecoverexchange/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/tradecoverexchange/google-cloud-jwt-validator)
+
 
 A package for validating the authenticity of incoming Google Cloud requests such as those used by
 Google Cloud Tasks or Google Cloud Scheduler. Laravel supported.

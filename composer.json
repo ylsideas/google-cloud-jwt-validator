@@ -24,15 +24,20 @@
     ],
     "require": {
         "php": "^7.3|^8.0",
-        "firebase/php-jwt": ">=5.2.0"
+        "firebase/php-jwt": "^6.0|^5.2"
     },
     "require-dev": {
-        "friendsofphp/php-cs-fixer": "^2.16",
         "kevinrob/guzzle-cache-middleware": "^3.3",
-        "laravel/framework": "^8.0",
-        "orchestra/testbench": "^6.0",
-        "phpunit/phpunit": "^9.0",
-        "vimeo/psalm": "^4.3"
+        "orchestra/testbench": "^7.0|^6.24.1|^5.20.0",
+        "nunomaduro/collision": "^6.0|^5.0",
+        "pestphp/pest": "^1.21",
+        "pestphp/pest-plugin-laravel": "^1.1",
+        "nunomaduro/larastan": "^2.0|^1.0",
+        "phpstan/extension-installer": "^1.1",
+        "phpstan/phpstan-deprecation-rules": "^1.0",
+        "phpstan/phpstan-phpunit": "^1.0",
+        "phpunit/phpunit": "^9.5.13|^8.3",
+        "spatie/laravel-ray": "^1.26"
     },
     "autoload": {
         "psr-4": {
@@ -52,13 +57,16 @@
         }
     },
     "scripts": {
-        "psalm": "vendor/bin/psalm",
-        "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
-        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
+        "analyse": "vendor/bin/phpstan analyse",
+        "test": "vendor/bin/pest",
+        "test-coverage": "vendor/bin/pest coverage"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true,
+            "phpstan/extension-installer": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true

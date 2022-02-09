@@ -32,7 +32,7 @@ class OidcVerifier
         $key = JWK::parseKeySet($this->fetcher->fetch($jwkUri));
 
         try {
-            $token = JWT::decode($jsonWebToken, $key, ['RS256']);
+            $token = JWT::decode($jsonWebToken, $key);
         } catch (\UnexpectedValueException $exception) {
             if ($throwExceptions) {
                 throw new FailedToDecodeException();

@@ -9,6 +9,10 @@ class GoogleJwtValidatorServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->app->singleton(JwkFetcher::class, HttpClientJwkFetcher::class);
+        if (method_exists($this->app, 'scoped')) {
+            $this->app->scoped(JwkFetcher::class, HttpClientJwkFetcher::class);
+        } else {
+            $this->app->singleton(JwkFetcher::class, HttpClientJwkFetcher::class);
+        }
     }
 }

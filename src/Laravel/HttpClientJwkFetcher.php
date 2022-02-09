@@ -37,7 +37,6 @@ class HttpClientJwkFetcher implements JwkFetcher
                         )
                     )
                 ),
-                'cache'
             )
             ->get($uri)
             ->json();
