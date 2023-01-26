@@ -1,11 +1,11 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Tests\Laravel;
+namespace YlsIdeas\GoogleJwtVerifier\Tests\Laravel;
 
 use Orchestra\Testbench\TestCase;
-use TradeCoverExchange\GoogleJwtVerifier\JwkFetcher;
-use TradeCoverExchange\GoogleJwtVerifier\Laravel\GoogleJwtValidatorServiceProvider;
-use TradeCoverExchange\GoogleJwtVerifier\Laravel\HttpClientJwkFetcher;
+use YlsIdeas\GoogleJwtVerifier\JwkFetcher;
+use YlsIdeas\GoogleJwtVerifier\Laravel\GoogleJwtValidatorServiceProvider;
+use YlsIdeas\GoogleJwtVerifier\Laravel\HttpClientJwkFetcher;
 
 class ServiceProviderTest extends TestCase
 {

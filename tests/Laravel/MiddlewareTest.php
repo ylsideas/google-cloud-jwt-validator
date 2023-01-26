@@ -1,13 +1,13 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Tests\Laravel;
+namespace YlsIdeas\GoogleJwtVerifier\Tests\Laravel;
 
 use Illuminate\Support\Facades\Route;
 use Mockery\MockInterface;
 use Orchestra\Testbench\TestCase;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use TradeCoverExchange\GoogleJwtVerifier\Laravel\AuthenticateByOidc;
-use TradeCoverExchange\GoogleJwtVerifier\OidcVerifier;
+use YlsIdeas\GoogleJwtVerifier\Laravel\AuthenticateByOidc;
+use YlsIdeas\GoogleJwtVerifier\OidcVerifier;
 
 class MiddlewareTest extends TestCase
 {

@@ -1,10 +1,10 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Laravel;
+namespace YlsIdeas\GoogleJwtVerifier\Laravel;
 
 use Closure;
 use Illuminate\Http\Response;
-use TradeCoverExchange\GoogleJwtVerifier\OidcVerifier;
+use YlsIdeas\GoogleJwtVerifier\OidcVerifier;
 
 class AuthenticateByOidc
 {

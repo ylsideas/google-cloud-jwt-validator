@@ -1,6 +1,6 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Exceptions;
+namespace YlsIdeas\GoogleJwtVerifier\Exceptions;
 
 use Symfony\Component\HttpKernel\Exception\HttpException;
 

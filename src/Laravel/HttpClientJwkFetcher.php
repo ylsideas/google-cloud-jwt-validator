@@ -1,13 +1,13 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Laravel;
+namespace YlsIdeas\GoogleJwtVerifier\Laravel;
 
 use Illuminate\Contracts\Cache\Repository as Cache;
 use Illuminate\Http\Client\Factory as Http;
 use Kevinrob\GuzzleCache\CacheMiddleware;
 use Kevinrob\GuzzleCache\Storage\LaravelCacheStorage;
 use Kevinrob\GuzzleCache\Strategy\PrivateCacheStrategy;
-use TradeCoverExchange\GoogleJwtVerifier\JwkFetcher;
+use YlsIdeas\GoogleJwtVerifier\JwkFetcher;
 
 class HttpClientJwkFetcher implements JwkFetcher
 {

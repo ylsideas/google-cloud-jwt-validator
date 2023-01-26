@@ -1,6 +1,6 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Exceptions;
+namespace YlsIdeas\GoogleJwtVerifier\Exceptions;
 
 class FailedToDecodeException extends \UnexpectedValueException
 {
