@@ -9,7 +9,7 @@ use YlsIdeas\GoogleJwtVerifier\Laravel\HttpClientJwkFetcher;
 
 class ServiceProviderTest extends TestCase
 {
-    public function testProvidesImplementationForJwtFetcher()
+    public function test_provides_implementation_for_jwt_fetcher()
     {
         $instance = $this->app->make(JwkFetcher::class);
 

@@ -11,7 +11,7 @@ use YlsIdeas\GoogleJwtVerifier\OidcVerifier;
 
 class MiddlewareTest extends TestCase
 {
-    public function testValidatesVerifiableTokens()
+    public function test_validates_verifiable_tokens()
     {
         $this->withoutExceptionHandling();
 
@@ -35,7 +35,7 @@ class MiddlewareTest extends TestCase
             ->assertSuccessful();
     }
 
-    public function testMiddlewareBlocksUnauthorisedRequests()
+    public function test_middleware_blocks_unauthorised_requests()
     {
         $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')
@@ -49,7 +49,7 @@ class MiddlewareTest extends TestCase
             ->assertUnauthorized();
     }
 
-    public function testMiddlewareBlocksRequests()
+    public function test_middleware_blocks_requests()
     {
         $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')
