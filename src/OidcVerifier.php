@@ -1,13 +1,13 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier;
+namespace YlsIdeas\GoogleJwtVerifier;
 
 use Firebase\JWT\JWK;
 use Firebase\JWT\JWT;
-use TradeCoverExchange\GoogleJwtVerifier\Exceptions\FailedToDecodeException;
-use TradeCoverExchange\GoogleJwtVerifier\Exceptions\InvalidAudienceException;
-use TradeCoverExchange\GoogleJwtVerifier\Exceptions\InvalidEmailException;
-use TradeCoverExchange\GoogleJwtVerifier\Exceptions\InvalidIssuerException;
+use YlsIdeas\GoogleJwtVerifier\Exceptions\FailedToDecodeException;
+use YlsIdeas\GoogleJwtVerifier\Exceptions\InvalidAudienceException;
+use YlsIdeas\GoogleJwtVerifier\Exceptions\InvalidEmailException;
+use YlsIdeas\GoogleJwtVerifier\Exceptions\InvalidIssuerException;
 
 class OidcVerifier
 {

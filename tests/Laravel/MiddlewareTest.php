@@ -1,17 +1,17 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Tests\Laravel;
+namespace YlsIdeas\GoogleJwtVerifier\Tests\Laravel;
 
 use Illuminate\Support\Facades\Route;
 use Mockery\MockInterface;
 use Orchestra\Testbench\TestCase;
 use Symfony\Component\HttpKernel\Exception\HttpException;
-use TradeCoverExchange\GoogleJwtVerifier\Laravel\AuthenticateByOidc;
-use TradeCoverExchange\GoogleJwtVerifier\OidcVerifier;
+use YlsIdeas\GoogleJwtVerifier\Laravel\AuthenticateByOidc;
+use YlsIdeas\GoogleJwtVerifier\OidcVerifier;
 
 class MiddlewareTest extends TestCase
 {
-    public function testValidatesVerifiableTokens()
+    public function test_validates_verifiable_tokens()
     {
         $this->withoutExceptionHandling();
 
@@ -35,7 +35,7 @@ class MiddlewareTest extends TestCase
             ->assertSuccessful();
     }
 
-    public function testMiddlewareBlocksUnauthorisedRequests()
+    public function test_middleware_blocks_unauthorised_requests()
     {
         $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')
@@ -49,7 +49,7 @@ class MiddlewareTest extends TestCase
             ->assertUnauthorized();
     }
 
-    public function testMiddlewareBlocksRequests()
+    public function test_middleware_blocks_requests()
     {
         $this->mock(OidcVerifier::class, function (MockInterface $mock) {
             $mock->shouldReceive('verify')

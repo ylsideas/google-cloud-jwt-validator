@@ -1,9 +1,9 @@
 # Google Cloud JWT Authentication
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/tradecoverexchange/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/tradecoverexchange/google-cloud-jwt-validator)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/run-tests?label=tests)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/tradecoverexchange/google-cloud-jwt-validator/Check%20&%20fix%20styling?label=code%20style)](https://github.com/tradecoverexchange/google-cloud-jwt-validator/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/tradecoverexchange/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/tradecoverexchange/google-cloud-jwt-validator)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/ylsideas/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/ylsideas/google-cloud-jwt-validator)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/ylsideas/google-cloud-jwt-validator/run-tests?label=tests)](https://github.com/ylsideas/google-cloud-jwt-validator/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/ylsideas/google-cloud-jwt-validator/Check%20&%20fix%20styling?label=code%20style)](https://github.com/ylsideas/google-cloud-jwt-validator/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/ylsideas/google-cloud-jwt-validator.svg?style=flat-square)](https://packagist.org/packages/ylsideas/google-cloud-jwt-validator)
 
 
 A package for validating the authenticity of incoming Google Cloud requests such as those used by
@@ -14,7 +14,7 @@ Google Cloud Tasks or Google Cloud Scheduler. Laravel supported.
 You can install the package via composer:
 
 ```bash
-composer require tradecoverexchange/google-cloud-jwt-validator
+composer require ylsideas/google-cloud-jwt-validator
 ```
 
 ## Usage
@@ -27,7 +27,7 @@ without a valid JWT authentication token.
 
 Route::get('/')
     ->middleware(
-        \TradeCoverExchange\GoogleJwtVerifier\Laravel\AuthenticateByOidc::middleware('server_account_email@google.com')
+        \YlsIdeas\GoogleJwtVerifier\Laravel\AuthenticateByOidc::middleware('server_account_email@google.com')
     );
 ```
 

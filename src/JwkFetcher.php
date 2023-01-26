@@ -1,6 +1,6 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier;
+namespace YlsIdeas\GoogleJwtVerifier;
 
 interface JwkFetcher
 {

@@ -1,12 +1,12 @@
 {
-    "name": "tradecoverexchange/google-cloud-jwt-validator",
+    "name": "ylsideas/google-cloud-jwt-validator",
     "description": "A package for validating Google Cloud's JWT provided by webhooks",
     "keywords": [
         "trade cover exchange",
         "json web token",
         "google cloud"
     ],
-    "homepage": "https://github.com/tradecoverexchange/google-cloud-jwt-validator",
+    "homepage": "https://github.com/ylsideas/google-cloud-jwt-validator",
     "license": "MIT",
     "authors": [
         {
@@ -23,12 +23,12 @@
         }
     ],
     "require": {
-        "php": "^8.0|^7.4",
-        "firebase/php-jwt": "^6.0|^5.2"
+        "php": "^8.1",
+        "firebase/php-jwt": "^6.0"
     },
     "require-dev": {
         "kevinrob/guzzle-cache-middleware": "^3.3",
-        "orchestra/testbench": "^7.0|^6.24.1|^5.20.0",
+        "orchestra/testbench": "^8.0|^7.0",
         "nunomaduro/collision": "^6.0|^5.0",
         "pestphp/pest": "^1.21",
         "pestphp/pest-plugin-laravel": "^1.1",
@@ -37,27 +37,29 @@
         "phpstan/phpstan-deprecation-rules": "^1.0",
         "phpstan/phpstan-phpunit": "^1.0",
         "phpunit/phpunit": "^9.5.13|^8.3",
-        "spatie/laravel-ray": "^1.26"
+        "spatie/laravel-ray": "^1.26",
+        "laravel/pint": "^1.2"
     },
     "autoload": {
         "psr-4": {
-            "TradeCoverExchange\\GoogleJwtVerifier\\": "src"
+            "YlsIdeas\\GoogleJwtVerifier\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "TradeCoverExchange\\GoogleJwtVerifier\\Tests\\": "tests"
+            "YlsIdeas\\GoogleJwtVerifier\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "TradeCoverExchange\\GoogleJwtVerifier\\Laravel\\GoogleJwtValidatorServiceProvider"
+                "YlsIdeas\\GoogleJwtVerifier\\Laravel\\GoogleJwtValidatorServiceProvider"
             ]
         }
     },
     "scripts": {
         "analyse": "vendor/bin/phpstan analyse",
+        "lint": "vendor/bin/pint",
         "test": "vendor/bin/pest",
         "test-coverage": "vendor/bin/pest coverage"
     },

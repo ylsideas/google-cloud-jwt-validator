@@ -1,9 +1,9 @@
 <?php
 
-namespace TradeCoverExchange\GoogleJwtVerifier\Laravel;
+namespace YlsIdeas\GoogleJwtVerifier\Laravel;
 
 use Illuminate\Support\ServiceProvider;
-use TradeCoverExchange\GoogleJwtVerifier\JwkFetcher;
+use YlsIdeas\GoogleJwtVerifier\JwkFetcher;
 
 class GoogleJwtValidatorServiceProvider extends ServiceProvider
 {
